@@ -64,7 +64,7 @@ export default class Controller {
 	}
 
 	removeCompletedItems() {
-		this.store.remove({completed: true}, this._filter.bind(this));
+		this.store.remove({completed: false}, this._filter.bind(this));
 	}
 
 	toggleCompleted(id, completed) {

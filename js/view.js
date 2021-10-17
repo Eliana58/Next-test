@@ -25,6 +25,10 @@ export default class View {
     const listItem = target.parentElement.parentElement;
 
     listItem.classList.add('editing');
+    
+    if (evt.keyCode == 13 && !evt.shiftKey) {
+      form.submit();
+  }
 
     const input = document.createElement('input');
     input.className = 'edit';
@@ -46,6 +50,7 @@ export default class View {
     }
   }
 
+  
   setItemsLeft(itemsLeft) {
     this.$todoItemCounter.innerHTML = this.template.itemCounter(itemsLeft);
   }

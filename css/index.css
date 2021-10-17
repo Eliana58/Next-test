@@ -145,7 +145,7 @@ body {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	max-height: 300px;
+	/* max-height prevented use text that uses more then 300px and thats why it was outsied the div  */
 }
 
 .todo-list li {
